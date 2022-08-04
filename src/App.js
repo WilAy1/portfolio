@@ -10,6 +10,38 @@ import {BsBriefcase} from "react-icons/bs";
 import {MdComputer} from "react-icons/md";
 import {IoMdContacts} from "react-icons/io";
 function App() {
+const pages = ["home", "about", "exp", "port", "contact"];
+var i = 0;
+  window.onkeyup = (e)=>{
+    switch (e.code) {
+      case "ArrowDown":
+        if(i < pages.length){
+          i++;
+        }
+        try {
+          window.scrollTo(0, document.getElementById(pages[i]).offsetTop);
+          window.location.hash = "#"+pages[i];
+        }
+        catch (e){
+          //console.log(e)
+        }
+        break;
+      case "ArrowUp":
+        if(i != 0){
+          i--;
+        }
+        try {
+          window.scrollTo(0, document.getElementById(pages[i]).offsetTop);
+          window.location.hash = "#"+pages[i];
+        }
+        catch (e){
+          //console.log(e)
+        }
+        break;
+      default:
+        break;
+    }
+  }
   return (
     <div className="App">
       <div className='nav left_nav'>
