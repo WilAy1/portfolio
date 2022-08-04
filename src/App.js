@@ -9,10 +9,11 @@ import { AiOutlineUser, AiOutlineHome, AiOutlineTwitter, AiOutlineLinkedin, AiOu
 import {BsBriefcase} from "react-icons/bs";
 import {MdComputer} from "react-icons/md";
 import {IoMdContacts} from "react-icons/io";
+import { useState } from 'react';
 function App() {
 const pages = ["home", "about", "exp", "port", "contact"];
 var i = 0;
-  window.onkeyup = (e)=>{
+  window.onkeypress = (e)=>{
     switch (e.code) {
       case "ArrowDown":
         if(i < pages.length){
@@ -27,7 +28,7 @@ var i = 0;
         }
         break;
       case "ArrowUp":
-        if(i != 0){
+        if(i < pages.length){
           i--;
         }
         try {
