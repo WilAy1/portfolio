@@ -13,7 +13,7 @@ import { useState } from 'react';
 function App() {
 const pages = ["home", "about", "exp", "port", "contact"];
 var i = 0;
-  window.onkeypress = (e)=>{
+  window.onkeyup = (e)=>{
     switch (e.code) {
       case "ArrowDown":
         if(i < pages.length){
