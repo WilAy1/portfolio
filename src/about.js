@@ -8,12 +8,14 @@ export default function About(){
                 <div className="aboutImage">
                     <img src={image} alt="Minion"></img>
                 </div>
+                {/*
                 <p>Hello, I'm <b>WILLIAMS</b>, somewhat of a Fullstack Developer (wouldn't call my self that 😅)
                     <br />
                     I love to create new sh*t and fix problems. I'm always looking out for new stuffs to get used to.
                     <br/>
                  Currently learning ML algorithms. Reach out to me for a full insight.
                 </p>
+                */}
             </div>
             <div className='rrrr'>
                 Reach Out to Me
